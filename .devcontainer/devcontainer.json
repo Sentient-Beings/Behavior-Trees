@@ -1,0 +1,43 @@
+{
+    "name": "ros2-dev dev container",
+    "privileged": true,
+    "build": {
+        "dockerfile": "full.Dockerfile",
+        "context": "../.."
+    },
+    "initializeCommand": "xhost +",
+    "workspaceFolder": "/home/ros2-dev/mnt/ws",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/ros2-dev/mnt,type=bind,consistency=cached",
+    "containerEnv": {
+        "DISPLAY": "${env:DISPLAY}",
+        "NVIDIA_VISIBLE_DEVICES": "all",
+        "NVIDIA_DRIVER_CAPABILITIES": "all",
+        "ROS_DOMAIN_ID": 55
+    },
+    "runArgs": [
+        "--net=host",
+        "--runtime=nvidia",
+    ],
+    "mounts": [
+       "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+       "source=/dev,target=/dev,type=bind,consistency=cached"
+    ],
+
+    "postCreateCommand": "../container_scripts/entrypoint.sh",
+
+    "otherPortsAttributes": {
+        "onAutoForward": "ignore"
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "donjayamanne.python-extension-pack",
+                "ms-iot.vscode-ros"
+            ]
+        }
+    }
+
+}
