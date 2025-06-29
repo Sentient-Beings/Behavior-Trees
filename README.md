@@ -1,6 +1,6 @@
 # How to use Behavior Trees in ROS 2 with BT.CPP
 
-This repository is for learning how to create and use behavior trees in ROS 2 with the `BT.CPP` library. It's meant to be used alongside the blog post I wrote about it: [link].
+This repository is for learning how to create and use behavior trees in ROS 2 with the `BT.CPP` library. It's meant to be used alongside the blog post I wrote about it: https://sentientbeing.bearblog.dev/why-and-how-to-use-behavior-trees-in-your-robot-application/
 
 The whole setup is dockerized, so you don't have to worry about installing ROS 2 or any other dependencies on your machine. Just follow the steps below.
 
