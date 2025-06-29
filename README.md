@@ -73,3 +73,6 @@ ros2 launch behavior_tree tree.launch.py target_color:=green
 
 You can change `green` to another color if you want to see the robot search for something else. Groot2 should also pop up and show you the tree's state in real-time.
 
+### 3. Credits 
+The code for this project was adopted from this repo: https://github.com/sea-bass/turtlebot3_behavior_demos. A great work done by Sebastian Castro. Head to https://roboticseabass.com/ to learn more about robotics related blogs. 
+
